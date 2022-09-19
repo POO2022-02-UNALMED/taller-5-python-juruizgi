@@ -21,6 +21,7 @@ class Reptil(Animal):
 	@classmethod
 	def crearIguana(cls,nombre,edad,genero):
 		r = Reptil(nombre,edad,"humedal",genero,"verde",3)
+		cls._listado.append(r)
 		cls._iguanas+=1
 		return r
 

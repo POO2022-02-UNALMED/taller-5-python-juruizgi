@@ -19,7 +19,7 @@ class Animal:
 		return "Mamiferos:",len(Mamifero.getListado()),"\nAves:",len(Ave.getListado()),"\nReptiles:",len(Reptil.getListado()),"\nPeces:",len(Pez.getListado()),"\nAnfibios:",len(Anfibio.getListado())
 
 	def __str__(self):
-		if (self._zona[0].getZoo().getNombre()!=None and self._zona[0].getNombre()!=None):
+		if (self._zona[0].getZoo()!=None and self._zona[0].getZoo()!=None and self._zona[0].getNombre()!=None):
 			return f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}, la zona en la que me ubico es {self._zona[0].getNombre()} en el {self._zona[0].getZoo().getNombre()}"
 		else:
 			return f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}"

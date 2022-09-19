@@ -3,9 +3,7 @@ from gestion.zoologico import Zoologico
 class Zona:
 	def __init__(self,nombre=None,zoo=None):
 		self._nombre = nombre
-		self._zoo = zoo
-		if self._zoo is None: self._zoo = [Zoologico()]
-		else: self._zoo = [zoo]
+		self._zoo = [zoo]
 		self._animales = []
 
 	def agregarAnimales(self,animal):
@@ -25,7 +23,7 @@ class Zona:
 		return self._zoo[0]
 
 	def setZoo(self,zoo):
-		self._zoo[0] = zoo
+		self._zoo = [zoo]
 
 	def getAnimales(self):
 		return self._animales
