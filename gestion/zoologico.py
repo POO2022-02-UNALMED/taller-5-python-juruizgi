@@ -1,4 +1,4 @@
-#from gestion.zona import Zona
+from gestion.zona import Zona
 
 class Zoologico:
 	def __init__(self,nombre=None,ubicacion=None):
