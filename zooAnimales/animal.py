@@ -1,5 +1,8 @@
 from gestion.zona import Zona
 from gestion.zoologico import Zoologico
+from zooAnimales.mamifero import Mamifero
+from zooAnimales.pez import Pez
+from zooAnimales.
 
 class Animal:
 	_totalAnimales = 0
