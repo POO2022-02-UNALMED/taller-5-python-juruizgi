@@ -1,5 +1,4 @@
 from gestion.zona import Zona
-
 class Animal:
 	_totalAnimales = 0
 	def __init__(self,nombre=None,edad=None,habitat=None,genero=None):
