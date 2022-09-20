@@ -1,9 +1,10 @@
 from zooAnimales.animal import Animal
 
+
 class Pez(Animal):
 	_listado = []
-	_salmones = 0
-	_bacalaos = 0
+	salmones = 0
+	bacalaos = 0
 
 	def __init__(self,nombre=None,edad=None,habitat=None,genero=None,colorEscamas=None,cantidadAletas=None):
 		super().__init__(nombre,edad,habitat,genero)
@@ -18,14 +19,14 @@ class Pez(Animal):
 	def crearSalmon(cls,nombre,edad,genero):
 		p = Pez(nombre,edad,"oceano",genero,"rojo",6)
 		cls._listado.append(p)
-		cls._salmones+=1
+		cls.salmones+=1
 		return p
 
 	@classmethod
 	def crearBacalao(cls,nombre,edad,genero):
 		p = Pez(nombre,edad,"oceano",genero,"gris",6)
 		cls._listado.append(p)
-		cls._bacalaos+=1
+		cls.bacalaos+=1
 		return p
 
 	@classmethod

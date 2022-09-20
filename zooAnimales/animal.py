@@ -1,8 +1,10 @@
 from gestion.zona import Zona
 from gestion.zoologico import Zoologico
+from zooAnimales.anfibio import Anfibio
+from zooAnimales.ave import Ave
 from zooAnimales.mamifero import Mamifero
 from zooAnimales.pez import Pez
-from zooAnimales.
+from zooAnimales.reptil import Reptil
 
 class Animal:
 	_totalAnimales = 0
@@ -21,11 +23,18 @@ class Animal:
 	def totalPorTipo(cls):
 		return "Mamiferos:",len(Mamifero.getListado()),"\nAves:",len(Ave.getListado()),"\nReptiles:",len(Reptil.getListado()),"\nPeces:",len(Pez.getListado()),"\nAnfibios:",len(Anfibio.getListado())
 
+	def toString(self):
+		if (self._zona[0].getZoo()!=None and self._zona[0].getZoo()!=None and self._zona[0].getNombre()!=None):
+			return f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}, la zona en la que me ubico es {self._zona[0].getNombre()} en el {self._zona[0].getZoo().getNombre()}"
+		else:
+			return f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}"
+
 	def __str__(self):
 		if (self._zona[0].getZoo()!=None and self._zona[0].getZoo()!=None and self._zona[0].getNombre()!=None):
 			return f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}, la zona en la que me ubico es {self._zona[0].getNombre()} en el {self._zona[0].getZoo().getNombre()}"
 		else:
 			return f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}"
+
 
 	def getHabitat(self):
 		return self._habitat
