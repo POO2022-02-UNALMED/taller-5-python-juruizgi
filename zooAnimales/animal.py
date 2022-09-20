@@ -20,7 +20,7 @@ class Animal:
 		from zooAnimales.ave import Ave
 		from zooAnimales.pez import Pez
 
-		return f"Mamiferos: {len(Mamifero.getListado())}\nAves: {len(Ave.getListado())}\nReptiles: {len(Reptil.getListado())}\nPeces: {len(Pez.getListado())}\nAnfibios: {len(Anfibio.getListado())}"
+		return f"Mamiferos : {Mamifero.cantidadMamiferos()}\nAves : {Ave.cantidadAves()}\nReptiles : {len(Reptil.getListado())}\nPeces : {len(Pez.getListado())}\nAnfibios : {len(Anfibio.getListado())}"
 
 	def toString(self):
 		if (self._zona[0].getZoo()!=None and self._zona[0].getZoo()!=None and self._zona[0].getNombre()!=None):
